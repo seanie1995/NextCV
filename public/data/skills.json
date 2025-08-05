@@ -1,0 +1,59 @@
+[
+    {
+        "category": "Languages",
+        "skills": [
+            "English - Native",
+            "Swedish - Fluent",
+            "Tagalog (Filipino) - Fluent"
+        ]
+    },
+    {
+        "category": "Backend Development",
+        "skills": [
+            "SQL",
+            "MSSQL",
+            ".NET",
+            "ASP.NET",
+            "Entity Framework",
+            "REST API"
+        ]
+    },
+    {
+        "category": "Web Development",
+        "skills": [
+            "React",
+            "NextJS",
+            "HTML",
+            "CSS",
+            "Tailwind",
+            "Bootstrap",
+            ".NET MVC"
+        ]
+    },
+    {
+        "category": "Programming Languages",
+        "skills": [
+            "C#",
+            "JavaScript",
+            "TypeScript"
+        ]
+    },
+    {
+        "category": "Version Control",
+        "skills": [
+            "Git",
+            "GitHub"
+        ]
+    },
+    {
+        "category": "Audio Production",
+        "skills": [
+            "Mixing",
+            "Mastering",
+            "Live Mixing",
+            "Songwriting",
+            "Audio Engineering",
+            "Music Production"
+        ]
+    }
+]

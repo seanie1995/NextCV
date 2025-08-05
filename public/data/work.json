@@ -1,0 +1,38 @@
+[
+    {
+        "company": "FemClinic",
+        "title": "Frontend Developer (Internship)",
+        "period": "July 2025 – Present",
+        "responsibilities": [
+            "Actively participating in the development and improvement of FemClinic's website.",
+            "Implementing modern frontend technologies to create an intuitive and accessible digital experience."
+        ]
+    },
+    {
+        "company": "PositionEtt",
+        "title": "Junior Full Stack Developer (Internship)",
+        "period": "December 2024 – May 2025",
+        "responsibilities": [
+            "Developed dynamic components such as graphs, menus, and navbars in React for upcoming versions of PositionEtt's applications.",
+            "Built a mobile version of the internal time tracking system using React Native."
+        ]
+    },
+    {
+        "company": "A&E Labs",
+        "title": "Junior Developer (Internship)",
+        "period": "June 2024 – September 2024",
+        "responsibilities": [
+            "Contributed to the development of a mobile-friendly web application in React with Firebase as the backend solution for authentication and data storage."
+        ]
+    },
+    {
+        "company": "Freelance/Various Employers",
+        "title": "Sound Technician",
+        "period": "September 2019 – October 2022",
+        "responsibilities": [
+            "Responsible for sound at various concerts, events, and performances.",
+            "Managed sound systems, rigging, and technical operations during events.",
+            "Also worked with artist services and often acted as stage manager."
+        ]
+    }
+]
