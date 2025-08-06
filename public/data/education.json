@@ -1,0 +1,20 @@
+[
+    {
+        "program": "Yrkeshögskoleprogram – Fullstack Developer .NET",
+        "institution": "Chas Academy",
+        "startDate": "September 2023",
+        "endDate": "May 2025"
+    },
+    {
+        "program": "Master's in Audiovisual Studies",
+        "institution": "Dalarna University",
+        "startDate": "September 2020",
+        "endDate": "May 2021"
+    },
+    {
+        "program": "Audio and Music Production",
+        "institution": "Dalarna University",
+        "startDate": "September 2017",
+        "endDate": "May 2020"
+    }
+]

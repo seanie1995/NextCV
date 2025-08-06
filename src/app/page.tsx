@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="my-10">
-      <section className="flex justify-evenly sm:flex-row flex-col">
+      <section className="flex justify-evenly sm:flex-row flex-col items-center">
 
         <div className="flex gap-2 flex-col">
           <h1 className="text-4xl">I'm Sean Schelin</h1>
@@ -26,6 +26,7 @@ export default function Home() {
             alt="Sean's profile photo"
             height={400}
             width={400}
+            className="rounded-4xl"
           />
         </div>
       </section>
