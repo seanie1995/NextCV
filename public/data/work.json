@@ -4,8 +4,7 @@
         "title": "Frontend Developer (Internship)",
         "period": "July 2025 – Present",
         "responsibilities": [
-            "Actively participating in the development and improvement of FemClinic's website.",
-            "Implementing modern frontend technologies to create an intuitive and accessible digital experience."
+            "Modernized internal and client-facing apps by developing reusable components (graphs, menus, navbars) in React, enhancing UI consistency and performance."
         ]
     },
     {
@@ -14,7 +13,7 @@
         "period": "December 2024 – May 2025",
         "responsibilities": [
             "Developed dynamic components such as graphs, menus, and navbars in React for upcoming versions of PositionEtt's applications.",
-            "Built a mobile version of the internal time tracking system using React Native."
+            "Built a mobile prototype of the time tracking system in React Native, demonstrating successful integration with legacy FileMaker databases and paving the way for native mobile solutions."
         ]
     },
     {
@@ -30,9 +29,9 @@
         "title": "Sound Technician",
         "period": "September 2019 – October 2022",
         "responsibilities": [
-            "Responsible for sound at various concerts, events, and performances.",
-            "Managed sound systems, rigging, and technical operations during events.",
-            "Also worked with artist services and often acted as stage manager."
+            "Ensured professional-grade audio experiences for concerts, theater, and events by managing live sound systems and technical operations.",
+            "Led stage operations and artist support at numerous live events, contributing to smooth, timely, and high-quality productions.",
+            "Recognized for adaptability and leadership in high-pressure environments, often stepping into stage manager roles when needed."
         ]
     }
 ]

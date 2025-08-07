@@ -9,7 +9,7 @@ const SkillsCard: React.FC<SkillsCardProps> = ({ data }) => {
     return (
         <div className='border-1 sm:w-1/2 max-h-1/2 p-2 rounded-2xl'>
             <h3 className='border-b-1 text-2xl'>{data.category}</h3>
-            <ul className='flex justify-between gap-2 flex-col'>
+            <ul className='flex justify-between gap-2 flex-col list-disc list-inside'>
                 {data.skills.map((item, index) => (
                     <li className='text-xl' key={index}>{item}</li>
                 ))}</ul>

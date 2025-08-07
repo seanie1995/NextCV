@@ -12,7 +12,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ data }) => {
             <section className='flex flex-col gap-3 border-b-purple-900 border-b-1 pb-3 w-screen sm:w-1/2'>
                 <h3 className='text-xl font-bold'>{data.company} - {data.title}</h3>
                 <h4 className='text-lg font-bold'> {data.period}</h4>
-                <ul>
+                <ul className='list-disc list-inside'>
                     {data.responsibilities.map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}</ul>
