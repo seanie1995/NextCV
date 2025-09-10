@@ -8,7 +8,7 @@ const SkillsPage = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            <h2 className="text-4xl font-bold mb-10 border-b-2 border-purple-600 pb-2 w-fit">
+            <h2 className="text-4xl font-bold mb-10 border-b-2 border-purple-600 pb-2 w-fit text-white">
                 Skills
             </h2>
 
