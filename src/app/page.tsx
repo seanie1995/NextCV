@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen">
       <section className="flex flex-col items-center gap-6">
-
         <div className="flex flex-col items-center gap-4">
           <Image
             src="/images/ProfPhoto.jpg"
@@ -17,20 +16,20 @@ export default function Home() {
           />
 
           <div className="text-center flex flex-col gap-2">
-            <h2 className="text-xl">Sean Schelin</h2>
-            <h1 className="text-5xl">Full Stack Developer</h1>
-            <p className="text-xl">
+            <h2 className="text-xl text-white">Sean Schelin</h2>
+            <h1 className="text-5xl  text-white">Full Stack Developer</h1>
+            <p className="text-xl text-white">
               Recent graduate from{" "}
               <a
-                className="font-bold hover:text-purple-900 hover:underline transition duration-300 ease-in-out"
+                className="font-bold hover:text-purple-900 hover:underline transition duration-300 ease-in-out text-white"
                 href="https://chasacademy.se/"
               >
                 Chas Academy
               </a>
             </p>
-            <p className="text-xl">Studied Full Stack Development .NET</p>
-            <p className="font-bold">Find me on:</p>
-            <ul className="flex flex-col gap-1">
+            <p className="text-xl text-white">Studied Full Stack Development .NET</p>
+            <p className="font-bold text-white">Find me on:</p>
+            <ul className="flex flex-col gap-1 text-white">
               <li>
                 <a
                   className="font-bold hover:text-purple-900 underline transition duration-300 ease-in-out"

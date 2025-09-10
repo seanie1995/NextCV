@@ -7,13 +7,17 @@ type SkillsCardProps = {
 
 const SkillsCard: React.FC<SkillsCardProps> = ({ data }) => {
     return (
-        <div className='border-1 sm:w-1/2 max-h-1/2 p-2 rounded-2xl'>
-            <h3 className='border-b-1 text-2xl'>{data.category}</h3>
-            <ul className='flex justify-between gap-2 flex-col list-disc list-inside'>
+        <div className="w-full p-6 bg-gray-900 text-white rounded-2xl shadow-lg border-l-4 border-purple-600 flex flex-col transition-transform hover:scale-105 min-h-[220px]">
+            <h3 className="text-2xl font-semibold mb-3 border-b border-gray-700 pb-1">
+                {data.category}
+            </h3>
+            <ul className="list-disc list-inside flex-1 flex flex-col gap-2 text-gray-300">
                 {data.skills.map((item, index) => (
-                    <li className='text-xl' key={index}>{item}</li>
-                ))}</ul>
-
+                    <li key={index} className="text-lg">
+                        {item}
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }
