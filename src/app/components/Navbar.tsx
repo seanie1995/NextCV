@@ -1,12 +1,19 @@
 "use client"
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import logo from "../../../public/images/logo.png"
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import logo from "../../../public/images/logo.png";
 import Image from "next/image";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname(); // current route
+
+    // Close menu on route change
+    useEffect(() => {
+        setIsOpen(false);
+    }, [pathname]);
 
     return (
         <nav className="w-full bg-gray-900 text-white shadow-md fixed top-0 left-0 z-50">
@@ -27,10 +34,7 @@ const Navbar = () => {
 
                     {/* Desktop links */}
                     <div className="hidden sm:flex space-x-8 text-lg font-medium">
-                        <Link href="/" className="hover:text-purple-400 transition-colors duration-200">Home</Link>
-                        <Link href="/Work" className="hover:text-purple-400 transition-colors duration-200">Work</Link>
-                        <Link href="/Skills" className="hover:text-purple-400 transition-colors duration-200">Skills</Link>
-                        <Link href="/Education" className="hover:text-purple-400 transition-colors duration-200">Education</Link>
+                        <Link href="/AboutMe" className="hover:text-purple-400 transition-colors duration-200">About</Link>
                         <Link href="/Contact" className="hover:text-purple-400 transition-colors duration-200">Contact</Link>
                     </div>
 
@@ -51,10 +55,7 @@ const Navbar = () => {
             {/* Mobile menu */}
             <div className={`sm:hidden bg-gray-900 transition-max-height duration-300 overflow-hidden ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
                 <div className="flex flex-col px-4 py-2 space-y-2 text-lg font-medium">
-                    <Link href="/" className="hover:text-purple-400 transition-colors duration-200" onClick={() => setIsOpen(false)}>Home</Link>
-                    <Link href="/Work" className="hover:text-purple-400 transition-colors duration-200" onClick={() => setIsOpen(false)}>Work</Link>
-                    <Link href="/Skills" className="hover:text-purple-400 transition-colors duration-200" onClick={() => setIsOpen(false)}>Skills</Link>
-                    <Link href="/Education" className="hover:text-purple-400 transition-colors duration-200" onClick={() => setIsOpen(false)}>Education</Link>
+                    <Link href="/AboutMe" className="hover:text-purple-400 transition-colors duration-200">About</Link>
                     <Link href="/Contact" className="hover:text-purple-400 transition-colors duration-200" onClick={() => setIsOpen(false)}>Contact</Link>
                 </div>
             </div>
