@@ -6,6 +6,8 @@ import SkillsCard from './components/SkillsCard';
 import type { Skills } from '../../types/skills';
 import SkillsList from "../../public/data/skills.json"
 
+import { FaLinkedin, FaGithub } from "react-icons/fa"
+
 import WorkCard from './components/WorkCard';
 import WorkList from '../../public/data/work.json' assert { type: 'json' };
 import type { WorkExperience } from '../../types/work'
@@ -43,24 +45,31 @@ export default function Home() {
               >
                 Chas Academy
               </a>
+              {" "}(June 2025)
             </p>
             <p className="text-xl text-white">Studied Full Stack Development .NET</p>
-            <p className="font-bold text-white">Find me on:</p>
-            <ul className="flex flex-col gap-1 text-white">
+            <p className="font-bold text-white mb-4 text-lg">Find me on:</p>
+            <ul className="flex justify-center gap-6">
               <li>
                 <a
-                  className="font-bold hover:text-purple-900 underline transition duration-300 ease-in-out"
                   href="https://www.linkedin.com/in/sean-harry-schelin-057227179/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-purple-600 text-white rounded-full font-semibold transition transform hover:scale-105"
                 >
+                  <FaLinkedin className="text-xl" />
                   LinkedIn
                 </a>
               </li>
               <li>
                 <a
-                  className="font-bold hover:text-purple-900 underline transition duration-300 ease-in-out"
                   href="https://github.com/seanie1995"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-purple-600 text-white rounded-full font-semibold transition transform hover:scale-105"
                 >
-                  Github
+                  <FaGithub className="text-xl" />
+                  GitHub
                 </a>
               </li>
             </ul>

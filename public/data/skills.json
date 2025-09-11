@@ -1,13 +1,5 @@
 [
     {
-        "category": "Languages",
-        "skills": [
-            "English - Native",
-            "Swedish - Fluent",
-            "Tagalog (Filipino) - Fluent"
-        ]
-    },
-    {
         "category": "Backend Development",
         "skills": [
             "SQL",
@@ -53,6 +45,14 @@
             "Songwriting",
             "Audio Engineering",
             "Music Production"
+        ]
+    },
+    {
+        "category": "Languages",
+        "skills": [
+            "English - Native",
+            "Swedish - Fluent",
+            "Tagalog (Filipino) - Fluent"
         ]
     }
 ]
