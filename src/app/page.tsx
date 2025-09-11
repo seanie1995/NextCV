@@ -48,7 +48,7 @@ export default function Home() {
               {" "}(June 2025)
             </p>
             <p className="text-xl text-white">Studied Full Stack Development .NET</p>
-            <p className="font-bold text-white mb-4 text-lg">Find me on:</p>
+            <p className="font-bold text-white text-lg">Find me on:</p>
             <ul className="flex justify-center gap-6">
               <li>
                 <a
@@ -70,6 +70,28 @@ export default function Home() {
                 >
                   <FaGithub className="text-xl" />
                   GitHub
+                </a>
+              </li>
+            </ul>
+
+            <p className="font-bold text-white text-lg">Download my CV</p>
+            <ul className="flex justify-center gap-6">
+              <li>
+                <a
+                  href="../../files/Sean-Schelin-CV-swe.pdf"
+                  download="Sean-Schelin-CV-swe.pdf"
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-purple-600 text-white rounded-full font-semibold transition transform hover:scale-105"
+                >
+                  SWE
+                </a>
+              </li>
+              <li>
+                <a
+                  href="../../files/Sean-Schelin-CV-eng.pdf"
+                  download="Sean-Schelin-CV-swe.pdf"
+                  className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-purple-600 text-white rounded-full font-semibold transition transform hover:scale-105"
+                >
+                  ENG
                 </a>
               </li>
             </ul>
