@@ -27,7 +27,7 @@ export default function Home() {
       <section className="flex flex-col items-center gap-6 mt-35">
         <div className="flex flex-col items-center gap-4">
           <Image
-            src="/images/ProfPhoto.jpg"
+            src="/images/NewProfPhoto.jpg"
             alt="Sean's profile photo"
             width={300}
             height={300}
