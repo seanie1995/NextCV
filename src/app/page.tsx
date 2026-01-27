@@ -19,10 +19,16 @@ export default function Home() {
     fetchData();
   }, []);
 
+  const projectPhotos = [
+    { name: "frostgrave-warband-manager", url: "" },
+    { name: "Planned-Planthood", url: "" },
+    { name: "RestaurantAPI", url: "" },
+  ];
+
   return (
     <main className="flex flex-col items-center justify-center min-h-screen">
       <section className="flex flex-col items-center gap-6 mt-35">
-        <div className="flex flex-col items-center gap-4">
+        <section className="flex flex-col items-center gap-4">
           <Image
             src="/images/NewProfPhoto.jpg"
             alt="Sean's profile photo"
@@ -96,7 +102,7 @@ export default function Home() {
             </ul>
           </div>
 
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+          <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
             <h2 className="text-4xl font-bold mb-10 border-b-2 border-purple-600 pb-2 w-fit text-white">
               Portfolio
             </h2>
@@ -106,8 +112,8 @@ export default function Home() {
                 <li key={i.id}>{i.name}</li>
               ))}
             </ul>
-          </div>
-        </div>
+          </section>
+        </section>
 
         <Contact />
       </section>
