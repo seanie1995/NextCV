@@ -66,7 +66,7 @@ export default function Home() {
             className="rounded-full w-72 h-72 object-cover"
           />
 
-          <div className="text-center flex flex-col gap-2">
+          <section className="text-center flex flex-col gap-2">
             <h2 className="text-xl text-white">Sean Schelin</h2>
             <h1 className="text-5xl  text-white">Full Stack Developer</h1>
             <p className="text-xl text-white">
@@ -130,14 +130,14 @@ export default function Home() {
                 </a>
               </li>
             </ul>
-          </div>
+          </section>
 
           <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
             <h2 className="text-4xl font-bold mb-10 border-b-2 border-purple-600 pb-2 w-fit text-white">
               Portfolio
             </h2>
 
-            <ul className="grid grid-cols-3 gap-4">
+            <ul className="grid lg:grid-cols-3 gap-4 sm:grid-cols-1 md:grid-cols-2">
               {repos.map((i, index) => (
                 <RepoCard data={i} key={index}/>
               ))}
