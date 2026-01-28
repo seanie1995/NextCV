@@ -7,8 +7,7 @@ type RepoProp = {
 };
 
 const RepoCard: React.FC<RepoProp> = ({ data }) => {
-  const baseCard =
-    "w-full p-6 bg-gray-900 text-white rounded-2xl shadow-lg border-l-4 border-purple-600 flex flex-col transition-transform hover:scale-105 min-h-[220px]";
+  const baseCard = "w-full p-6 bg-gray-900 text-white rounded-2xl shadow-lg border-l-4 border-purple-600 flex flex-col transition-transform hover:scale-105 min-h-[220px]";
 
   const baseHeading = "text-2xl font-semibold mb-3 border-b border-gray-700 pb-1";
 
@@ -25,8 +24,6 @@ const RepoCard: React.FC<RepoProp> = ({ data }) => {
           />
         </div>
       )}
-
-      
       <header>
         <h2 className={baseHeading}>{data.displayName}</h2>
       </header>
