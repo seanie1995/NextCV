@@ -31,10 +31,6 @@ export default function Home() {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    
-  }, [repos])
-
   const projectPhotos = [
   {
     name: "frostgrave-warband-manager",
@@ -68,7 +64,6 @@ export default function Home() {
             className="rounded-full w-72 h-72 object-cover"
           />
 
-
           {/* Profile Description */}
           <section className="text-center flex flex-col gap-2">
             <h2 className="text-xl text-white">Sean Schelin</h2>
@@ -82,7 +77,7 @@ export default function Home() {
             <ul className="flex justify-center gap-6">
               <li>
                 <a
-                  href="https://www.linkedin.com/in/sean-harry-schelin-057227179/"
+                  href="https://www.linkedin.com/in/sean-schelin-057227179/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-purple-600 text-white rounded-full font-semibold transition transform hover:scale-105"
@@ -129,18 +124,16 @@ export default function Home() {
 
           {/* Portfolio Section */}
           </section>
-            <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+
+          <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
             <h2 className="text-4xl font-bold mb-10 border-b-2 border-purple-600 pb-2 w-fit text-white">
               Portfolio
             </h2>
 
             <ul className="grid lg:grid-cols-3 gap-4 sm:grid-cols-1 md:grid-cols-2">
-
               {repos.length === 0 ? <p>Loading...</p> : repos.map((i, index) => (
                 <RepoCard data={i} key={index}/>
               ))}
-
-                  
             </ul>
           </section>
           <Contact />
