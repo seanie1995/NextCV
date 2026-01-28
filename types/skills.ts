@@ -1,4 +1,4 @@
-export type Skills = {
+export interface Skills {
     category: string,
     skills: string[]
 }

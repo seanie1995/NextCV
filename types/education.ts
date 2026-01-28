@@ -1,4 +1,4 @@
-export type Education = {
+export interface Education  {
     program: string,
     institution: string,
     startDate: string,

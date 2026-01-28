@@ -104,3 +104,8 @@ export interface Owner {
   user_view_type: string;
   site_admin: boolean;
 }
+
+export interface CompleteRepoInfo extends RepositoryInfo {
+  url: string
+  displayName: string
+}

@@ -4,26 +4,55 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { fetchSpecificRepos } from "./Utils/FetchGithubProjects";
-import { RepositoryInfo } from "../../types/RepositoryInfo";
+import { CompleteRepoInfo,  } from "../../types/RepositoryInfo";
+import RepoCard from "./components/RepoCard";
 
 import Contact from "./components/ContactForm";
 export default function Home() {
-  const [repos, setRepos] = useState<RepositoryInfo[]>([]);
+  const [repos, setRepos] = useState<CompleteRepoInfo[]>([]);
+  const [repoPhotos, setRepoPhotos] = useState<string[]>([])
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetchSpecificRepos();
-      setRepos(res);
+      const data = await fetchSpecificRepos();
+      
+      const dataWithPhotos: CompleteRepoInfo[] = data.map((i) => {
+        const matchingPhoto = projectPhotos.find((p) => p.name === i.name);
+        return {
+          ...i,
+          url: matchingPhoto ? matchingPhoto.url  : "",
+          displayName: matchingPhoto ? matchingPhoto.displayName : ""
+        }
+      })
+
+      setRepos(dataWithPhotos)
     };
 
     fetchData();
   }, []);
 
+  useEffect(() => {
+    
+  }, [repos])
+
   const projectPhotos = [
-    { name: "frostgrave-warband-manager", url: "" },
-    { name: "Planned-Planthood", url: "" },
-    { name: "RestaurantAPI", url: "" },
-  ];
+  {
+    name: "frostgrave-warband-manager",
+    displayName: "Frostgrave Warband Manager",
+    url: "/images/RepoPhotos/frostgrave.jpg"
+  },
+  {
+    name: "Planned-Planthood",
+    displayName: "Planned Planthood",
+    url: "/images/RepoPhotos/planned-planthood.png"
+  },
+  {
+    name: "RestaurantAPI",
+    displayName: "Restaurant Booking API",
+    url: "/images/RepoPhotos/restaurant.jpg"
+  },
+];
+
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen">
@@ -107,9 +136,9 @@ export default function Home() {
               Portfolio
             </h2>
 
-            <ul>
-              {repos.map((i) => (
-                <li key={i.id}>{i.name}</li>
+            <ul className="">
+              {repos.map((i, index) => (
+                <RepoCard data={i} key={index}/>
               ))}
             </ul>
           </section>
