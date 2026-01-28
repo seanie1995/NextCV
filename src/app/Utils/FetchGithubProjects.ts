@@ -2,16 +2,13 @@ import { RepositoryInfo } from "../../../types/RepositoryInfo";
 
 const projectIds = [
   {
-    name: "frostgrave-warband-manager",
-    id: 990520770,
+    name: "frostgrave-warband-manager", 
   },
   {
     name: "Planned-Planthood",
-    id: 990520770,
   },
   {
     name: "RestaurantAPI",
-    id: 846470050,
   },
 ];
 

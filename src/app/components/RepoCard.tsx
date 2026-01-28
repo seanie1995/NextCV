@@ -18,7 +18,7 @@ const RepoCard: React.FC<RepoProp> = ({ data }) => {
       {data.url && (
         <div className="mb-4 flex-shrink-0 relative h-64 w-full">
           <Image
-            src={data.url}
+            src={data.imgUrl}
             alt={data.displayName}
             fill
             className="object-cover rounded-lg"
@@ -34,7 +34,7 @@ const RepoCard: React.FC<RepoProp> = ({ data }) => {
         {data.description || "This is a placeholder description for the repository."}
       </p>
       <a
-        href={data.url}
+        href={data.html_url}
         target="_blank"
         rel="noopener noreferrer"
         className="text-blue-400 hover:text-blue-300 font-medium mt-auto"

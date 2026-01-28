@@ -20,7 +20,7 @@ export default function Home() {
         const matchingPhoto = projectPhotos.find((p) => p.name === i.name);
         return {
           ...i,
-          url: matchingPhoto ? matchingPhoto.url  : "",
+          imgUrl: matchingPhoto ? matchingPhoto.imgUrl  : "",
           displayName: matchingPhoto ? matchingPhoto.displayName : ""
         }
       })
@@ -39,17 +39,17 @@ export default function Home() {
   {
     name: "frostgrave-warband-manager",
     displayName: "Frostgrave Warband Manager",
-    url: "/images/RepoPhotos/frostgrave.jpg"
+    imgUrl: "/images/RepoPhotos/frostgrave.jpg"
   },
   {
     name: "Planned-Planthood",
     displayName: "Planned Planthood",
-    url: "/images/RepoPhotos/planned-planthood.png"
+    imgUrl: "/images/RepoPhotos/planned-planthood.png"
   },
   {
     name: "RestaurantAPI",
     displayName: "Restaurant Booking API",
-    url: "/images/RepoPhotos/restaurant.jpg"
+    imgUrl: "/images/RepoPhotos/restaurant.jpg"
   },
 ];
 
