@@ -16,7 +16,7 @@ const RepoCard: React.FC<RepoProp> = ({ data }) => {
     <div className={baseCard}>
      
       {data.url && (
-        <div className="mb-4 flex-shrink-0 relative h-128 w-full">
+        <div className="mb-4 flex-shrink-0 relative h-64 w-full">
           <Image
             src={data.url}
             alt={data.displayName}

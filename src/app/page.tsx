@@ -70,7 +70,7 @@ export default function Home() {
             <h2 className="text-xl text-white">Sean Schelin</h2>
             <h1 className="text-5xl  text-white">Full Stack Developer</h1>
             <p className="text-xl text-white">
-              Recent graduate from{" "}
+              Graduate from{" "}
               <a
                 className="font-bold hover:text-purple-900 hover:underline transition duration-300 ease-in-out text-white"
                 href="https://chasacademy.se/"
@@ -79,8 +79,9 @@ export default function Home() {
               </a>{" "}
               (June 2025)
             </p>
+            
             <p className="text-xl text-white">
-              Studied Full Stack Development .NET
+              Frontend Development student with NextJS and Typescript at Lexicon
             </p>
             <p className="font-bold text-white text-lg">Find me on:</p>
             <ul className="flex justify-center gap-6">
@@ -136,7 +137,7 @@ export default function Home() {
               Portfolio
             </h2>
 
-            <ul className="">
+            <ul className="grid grid-cols-3 gap-4">
               {repos.map((i, index) => (
                 <RepoCard data={i} key={index}/>
               ))}
