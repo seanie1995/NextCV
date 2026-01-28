@@ -69,19 +69,10 @@ export default function Home() {
           <section className="text-center flex flex-col gap-2">
             <h2 className="text-xl text-white">Sean Schelin</h2>
             <h1 className="text-5xl  text-white">Full Stack Developer</h1>
-            <p className="text-xl text-white">
-              Graduate from{" "}
-              <a
-                className="font-bold hover:text-purple-900 hover:underline transition duration-300 ease-in-out text-white"
-                href="https://chasacademy.se/"
-              >
-                Chas Academy
-              </a>{" "}
-              (June 2025)
-            </p>
+           
             
             <p className="text-xl text-white">
-              Frontend Development student with NextJS and Typescript at Lexicon
+              Studying Frontend Development with NextJS and Typescript at Lexicon
             </p>
             <p className="font-bold text-white text-lg">Find me on:</p>
             <ul className="flex justify-center gap-6">
