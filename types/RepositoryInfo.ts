@@ -106,6 +106,6 @@ export interface Owner {
 }
 
 export interface CompleteRepoInfo extends RepositoryInfo {
-  imgUrl: string
-  displayName: string
+  imgUrl?: string;
+  displayName: string;
 }

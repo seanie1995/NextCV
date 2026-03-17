@@ -7,13 +7,17 @@ const SkillsPage = () => {
     const typedSkillsList: Skills[] = SkillsList;
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-            <h2 className="text-4xl font-bold mb-10 border-b-2 border-purple-600 pb-2 w-fit text-white">
-                Skills
-            </h2>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <header className="mb-12">
+                <h2 className="text-3xl sm:text-4xl font-bold text-white section-heading">
+                    Skills
+                </h2>
+                <p className="mt-4 text-gray-400 max-w-xl">
+                    Technologies and tools I work with regularly.
+                </p>
+            </header>
 
-            {/* Grid layout */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {typedSkillsList.map((item, index) => (
                     <SkillsCard key={index} data={item} />
                 ))}

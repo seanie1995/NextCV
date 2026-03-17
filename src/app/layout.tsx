@@ -1,24 +1,61 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../app/components/Navbar"
 import { Analytics } from '@vercel/analytics/next';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Sean Schelin",
-  description: "Full Stack Developer Sean Schelin's CV Website",
+  metadataBase: new URL("https://seanschelin.dev"),
+  title: {
+    default: "Sean Schelin | Full Stack Developer",
+    template: "%s | Sean Schelin",
+  },
+  description: "Full Stack Developer specializing in Next.js, TypeScript, and modern web technologies. View my portfolio, skills, and work experience.",
+  keywords: ["Full Stack Developer", "Next.js", "TypeScript", "React", "Web Developer", "Portfolio"],
+  authors: [{ name: "Sean Schelin" }],
+  creator: "Sean Schelin",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://seanschelin.dev",
+    siteName: "Sean Schelin Portfolio",
+    title: "Sean Schelin | Full Stack Developer",
+    description: "Full Stack Developer specializing in Next.js, TypeScript, and modern web technologies.",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Sean Schelin Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sean Schelin | Full Stack Developer",
+    description: "Full Stack Developer specializing in Next.js, TypeScript, and modern web technologies.",
+    images: ["/images/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   icons: {
-    icon: "/images/logo-new.png", // Make sure this is in public/images/
+    icon: "/images/logo-new.png",
+    apple: "/images/logo-new.png",
   },
 };
 
@@ -28,9 +65,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased border-red-50 pt-16`}
+        className={`${inter.variable} antialiased pt-16`}
       >
         <Navbar />
         <main>{children}

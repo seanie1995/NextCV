@@ -1,5 +1,6 @@
 import React from 'react'
 import type { WorkExperience } from '../../../types/work'
+import { FaCalendarAlt } from "react-icons/fa";
 
 type WorkCardProps = {
     data: WorkExperience;
@@ -7,27 +8,32 @@ type WorkCardProps = {
 
 const WorkCard: React.FC<WorkCardProps> = ({ data }) => {
 
-    // Shared card style
-    const baseCard =
-        "w-full p-6 bg-gray-900 text-white rounded-2xl shadow-lg border-l-4 border-purple-600 flex flex-col transition-transform hover:scale-105 min-h-[220px]";
-
-    const baseHeading = "text-2xl font-semibold mb-3 border-b border-gray-700 pb-1";
-    const baseList = "list-disc list-inside flex-1 flex flex-col gap-2 text-gray-300";
-
     return (
-        <div className={baseCard}>
-            <h3 className={baseHeading}>{data.company}</h3>
-            <h4 className="text-lg font-medium text-purple-400 mb-3">
-                {data.title} | {data.period}
-            </h4>
-            <ul className={baseList}>
+        <article className="glass-card hover-lift p-6 sm:p-8">
+            <header className="mb-4">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
+                    <h3 className="text-xl sm:text-2xl font-semibold text-white">
+                        {data.company}
+                    </h3>
+                    <span className="flex items-center gap-2 text-sm text-gray-400">
+                        <FaCalendarAlt className="text-purple-400" />
+                        {data.period}
+                    </span>
+                </div>
+                <h4 className="text-lg font-medium text-purple-400">
+                    {data.title}
+                </h4>
+            </header>
+            
+            <ul className="space-y-3">
                 {data.responsibilities.map((item, index) => (
-                    <li key={index} className="text-lg">
-                        {item}
+                    <li key={index} className="flex items-start gap-3 text-gray-300">
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 flex-shrink-0" />
+                        <span className="leading-relaxed">{item}</span>
                     </li>
                 ))}
             </ul>
-        </div>
+        </article>
     )
 }
 
