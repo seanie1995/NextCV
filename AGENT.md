@@ -4,13 +4,14 @@
 - **master**: Production-ready code only
 - **dev**: Integration branch for testing features before release
 - **feature branches**: Created from `dev` for new features or bug fixes
-  - Naming convention: `feature/description` or `fix/description`
+  - Naming convention: `feature/ISSUE#-description` or `fix/ISSUE#-description`
+    - Example: `feature/123-add-login-validation`
   - Always branch from `dev`, never from `master`
   - Merge back to `dev` via pull request
 
 ## Workflow
 1. Start from `dev` branch: `git checkout dev`
-2. Create feature branch: `git checkout -b feature/your-feature-name`
+2. Create feature branch: `git checkout -b feature/ISSUE#-your-feature-name`
 3. Develop and commit changes
 4. Push branch: `git push -u origin feature/your-feature-name`
 5. Open pull request targeting `dev` branch
@@ -29,7 +30,7 @@ Follow Conventional Commits:
 
 Format: `type(scope): description`
 
-Example: `feat(auth): add login validation`
+Example: `feat(auth): #123 add login validation`
 
 ## Pull Request Requirements
 - Target branch must be `dev`
@@ -48,7 +49,7 @@ Example: `feat(auth): add login validation`
 
 ## Issue Tracking
 - Create issues for all work (bugs, features, tasks)
-- Reference issue numbers in branch names and commit messages
+- Reference issue numbers in branch names (e.g., `feature/123-description`) and commit messages
 - Close issues via pull request descriptions (e.g., "Closes #123")
 
 ## Release Process
