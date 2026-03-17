@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../app/components/Navbar"
+import Footer from "../app/components/Footer"
 import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
@@ -67,12 +68,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} antialiased pt-16`}
+        className={`${inter.variable} antialiased flex flex-col min-h-screen pt-16`}
       >
         <Navbar />
-        <main>{children}
+        <main className="flex-grow">{children}
           <Analytics />
         </main>
+        <Footer />
       </body>
     </html>
   );

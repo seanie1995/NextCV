@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FaPaperPlane, FaCheck, FaExclamationCircle } from "react-icons/fa";
 
 export default function Contact() {
-    const [result, setResult] = useState<{type: 'success' | 'error' | 'loading', message: string}>({type: 'loading', message: ''});
+    const [result, setResult] = useState<{type: 'success' | 'error' | 'loading' | 'idle', message: string}>({type: 'idle', message: ''});
 
     const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();

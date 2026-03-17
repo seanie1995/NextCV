@@ -28,7 +28,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ data }) => {
             <ul className="space-y-3">
                 {data.responsibilities.map((item, index) => (
                     <li key={index} className="flex items-start gap-3 text-gray-300">
-                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 flex-shrink-0" />
+                        <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 flex-shrink-0" />
                         <span className="leading-relaxed">{item}</span>
                     </li>
                 ))}
