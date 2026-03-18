@@ -61,10 +61,10 @@ export default function Home() {
       <section className='flex flex-col items-center justify-center min-h-[calc(100vh-4rem)] px-4 py-16 relative overflow-hidden'>
         {/* Animated background gradient */}
         <div className='absolute inset-0 bg-gradient-to-b from-purple-900/20 via-transparent to-transparent pointer-events-none' />
-        
+
         <div className='flex flex-col items-center gap-6 text-center max-w-2xl relative z-10'>
           {/* Profile Photo */}
-          <div 
+          <div
             className={`relative transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
             <div className='absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-500 rounded-full blur-2xl opacity-30 animate-pulse' />
@@ -79,17 +79,19 @@ export default function Home() {
           </div>
 
           {/* Name and Title */}
-          <div 
+          <div
             className={`space-y-2 transition-all duration-1000 delay-200 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
-            <p className='text-purple-400 font-medium tracking-wider uppercase text-sm'>Full Stack Developer</p>
+            <p className='text-purple-400 font-medium tracking-wider uppercase text-sm'>
+              Full Stack Developer
+            </p>
             <h1 className='text-4xl sm:text-5xl font-bold text-white bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent hover:scale-105 transition-transform duration-500 cursor-default'>
               Sean Schelin
             </h1>
           </div>
 
           {/* Description */}
-          <p 
+          <p
             className={`text-gray-300 max-w-lg transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
             Building modern web applications with Next.js and TypeScript.
@@ -97,7 +99,7 @@ export default function Home() {
           </p>
 
           {/* Social Links */}
-          <div 
+          <div
             className={`flex flex-wrap justify-center gap-4 transition-all duration-1000 delay-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
             <a
@@ -121,7 +123,7 @@ export default function Home() {
           </div>
 
           {/* CV Download */}
-          <div 
+          <div
             className={`pt-4 transition-all duration-1000 delay-700 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
             <p className='text-sm text-gray-400 mb-3'>Download CV</p>
@@ -143,13 +145,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <div className='absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce'>
-          <div className='w-6 h-10 rounded-full border-2 border-white/20 flex justify-center pt-2'>
-            <div className='w-1 h-2 bg-white/50 rounded-full animate-pulse' />
-          </div>
-        </div>
       </section>
 
       {/* Portfolio Section */}
@@ -158,7 +153,9 @@ export default function Home() {
         id='portfolio'
       >
         <div className='mb-10'>
-          <h2 className='text-3xl font-bold text-white mb-4 hover:text-purple-400 transition-colors duration-300'>Portfolio</h2>
+          <h2 className='text-3xl font-bold text-white mb-4 hover:text-purple-400 transition-colors duration-300'>
+            Portfolio
+          </h2>
           <p className='text-gray-400'>
             A selection of projects I&apos;ve worked on.
           </p>
@@ -171,13 +168,15 @@ export default function Home() {
             </li>
           ) : (
             repos.map((repo, index) => (
-              <li 
+              <li
                 key={repo.name}
                 className='transform transition-all duration-500 hover:scale-[1.02]'
-                style={{ 
+                style={{
                   animationDelay: `${index * 150}ms`,
-                  animation: isVisible ? 'fadeInUp 0.6s ease-out forwards' : 'none',
-                  opacity: isVisible ? 1 : 0
+                  animation: isVisible
+                    ? 'fadeInUp 0.6s ease-out forwards'
+                    : 'none',
+                  opacity: isVisible ? 1 : 0,
                 }}
               >
                 <RepoCard data={repo} />
